@@ -1,0 +1,16 @@
+{
+  "name": "icel_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "watch": "sass --watch sass:./",
+    "compile:css": "sass sass/style.scss:style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
+}

@@ -1,0 +1,52 @@
+@use "../custom" as c;
+
+.publikasi {
+  background-color: c.$grey-light;
+
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: min(30rem, 32%);
+    min-width: 20rem;
+    min-height: 15rem;
+    cursor: pointer;
+    transition: 600ms;
+
+    &:hover {
+      scale: 110%;
+      border-top: 3px solid c.$primary;
+      border-bottom: 3px solid c.$primary;
+    }
+  }
+
+  .publikasi-icon {
+    font-size: 1.75rem;
+  }
+
+  .publikasi-symbol {
+    width: 4rem;
+    height: 4rem;
+    background-color: c.$primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .publikasi-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: c.$secondary;
+  }
+}

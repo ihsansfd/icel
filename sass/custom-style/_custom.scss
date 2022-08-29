@@ -1,0 +1,10 @@
+/*
+We put it in this file so that custom variables can be overrode and loaded.
+Load this file instead of bootstrap.
+*/
+
+// import override variable
+@import "variables"; // harus menggunakan @import sehingga scope-nya global
+
+// import bootstrap
+@import "../assets/bootstrap/bootstrap";

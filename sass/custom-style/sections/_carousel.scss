@@ -1,0 +1,74 @@
+@use "../custom" as c;
+
+.primary-carousel {
+  padding: 0;
+  .carousel-inner {
+    .carousel-item {
+      height: 100vh;
+      width: 100vw;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 30%),
+          rgba(0, 0, 0, 0%)
+        );
+        z-index: 1;
+      }
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .carousel-cta {
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+      width: 60%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+
+      h3.sub-title {
+        margin: 0 auto;
+        width: 60%;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+
+        @include c.media-breakpoint-up(md) {
+          font-size: 1.4375rem;
+        }
+      }
+
+      h2.title {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+        @include c.media-breakpoint-up(lg) {
+          font-size: 4.0625rem;
+        }
+      }
+
+      .caption {
+        font-size: 0.875rem;
+        margin: 0 auto;
+        width: 60%;
+        // min-height: max-content;
+        // word-wrap: break-word;
+      }
+
+      .btn-cta {
+        text-shadow: inherit;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}

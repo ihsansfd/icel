@@ -1,0 +1,16 @@
+@use "../custom" as c;
+
+.footer-section {
+  background-color: c.$icel_secondary;
+  color: white;
+}
+
+.footer-widget {
+  min-width: 20rem;
+  max-width: min(30rem, 32%);
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 2.125rem;
+  }
+}
