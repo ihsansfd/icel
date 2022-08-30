@@ -1,68 +1,37 @@
 @use "../custom" as c;
+@use "../mixins" as mix;
 
 .kabar {
-  .category {
-    .col {
-      padding: 0.7rem 2rem;
-      white-space: nowrap;
-      // max-height: fit-content;
-      max-width: max-content;
-      border-radius: 0.5rem;
-      background-color: c.$grey-light;
-      font-size: 0.875rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: 600ms;
+  .card {
+    padding: 0;
+    img {
+      width: 100%;
+    }
 
-      &.active,
-      &:hover {
-        background-color: c.$primary;
-        color: white;
-      }
+    width: 80%;
+    @include c.media-breakpoint-up(md) {
+      width: 18rem;
     }
   }
 
-  .latest-posts {
-    .col {
-      min-width: 20rem;
-      max-width: min(30rem, 32%);
-      height: 14.0625rem;
-      background-image: url("../../../assets/img/posts/default.png");
-      background-size: cover;
-      background-position: center;
-      border-radius: 0.5rem;
-      position: relative;
-      transition: 600ms;
+  .card-title {
+    @include mix.card-title;
+  }
 
-      &:hover {
-        background-size: 120%;
-      }
+  .card-subtitle {
+    font-weight: 600;
+  }
 
-      .content {
-        position: absolute;
-        bottom: 1rem;
-        max-width: 90%;
-        background-color: white;
-        padding: 1rem;
-        border-radius: 0.3rem;
+  .card-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    max-height: 7rem;
+  }
 
-        .content-category {
-          color: c.$grey-dark;
-        }
-
-        .content-title {
-          font-size: 1rem;
-          font-weight: 600;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          cursor: pointer;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
+  .card-body {
+    padding: 2rem;
   }
 }

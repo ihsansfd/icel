@@ -1,16 +1,65 @@
 @use "../custom" as c;
 
 .footer-section {
+  padding-top: 6rem !important;
   background-color: c.$icel_secondary;
   color: white;
+  font-size: 0.9rem;
+
+  .title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .widget-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  ul {
+    list-style-type: none;
+    // margin-left: 1rem;
+    padding: 0;
+  }
+
+  .media-sosial-icon-container {
+    font-size: 1rem;
+  }
+
+  .media-sosial-icon {
+    display: inline-block;
+    background-color: c.$primary;
+    padding: 1rem;
+    border-radius: 60%;
+    position: relative;
+  }
+
+  .fa-brands {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .footer-widget {
-  min-width: 20rem;
-  max-width: min(30rem, 32%);
+  min-width: 15rem;
+  max-width: 80%;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  &:nth-child(4) {
+    margin-bottom: 2rem;
+  }
 
-  .title {
-    font-size: 1.5rem;
-    margin-bottom: 2.125rem;
+  @include c.media-breakpoint-up(md) {
+    max-width: min(30rem, 24%);
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    &:nth-child(4) {
+      margin-bottom: 0rem;
+    }
   }
 }

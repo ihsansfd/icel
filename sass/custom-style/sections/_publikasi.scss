@@ -1,52 +1,119 @@
 @use "../custom" as c;
+@use "../mixins" as mix;
 
 .publikasi {
   background-color: c.$grey-light;
 
-  .col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    max-width: min(30rem, 32%);
-    min-width: 20rem;
-    min-height: 15rem;
-    cursor: pointer;
-    transition: 600ms;
+  .link-publikasi {
+    a {
+      text-decoration: none;
+      color: white;
+    }
 
     &:hover {
-      scale: 110%;
-      border-top: 3px solid c.$primary;
-      border-bottom: 3px solid c.$primary;
+      a {
+        color: initial;
+      }
     }
   }
 
-  .publikasi-icon {
-    font-size: 1.75rem;
+  .slide-container {
+    // background-color: c.$grey-dark;
   }
 
-  .publikasi-symbol {
-    width: 4rem;
-    height: 4rem;
-    background-color: c.$primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .card {
+    width: 18rem !important;
+    height: 22rem;
     color: white;
-    border-radius: 0.5rem;
-    margin-bottom: 2rem;
+    padding: 3.125rem 1.875rem;
+    border-top-right-radius: 30px 30px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition: 500ms;
   }
 
-  .publikasi-title {
-    font-size: 1.125rem;
+  .card-title {
+    font-size: 2.2rem;
     font-weight: 600;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   }
 
-  p {
-    color: c.$secondary;
+  .card-description {
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-buku {
+    background-color: c.$primary;
+  }
+
+  .card-seri-analisis {
+    background-color: c.$primary-2;
+  }
+
+  .card-pendapat-hukum {
+    background-color: c.$primary-3;
+  }
+
+  .card-infografis {
+    background-color: c.$primary-4;
+  }
+
+  .card-kertas-kebijakan {
+    background-color: c.$primary-5;
+  }
+
+  .card-symbol {
+    display: block;
+    position: absolute;
+    font-size: 10rem;
+    bottom: -0.625rem;
+    right: -1.25rem;
+    opacity: 30%;
+  }
+
+  .slide-content {
+    padding: 2rem;
+  }
+
+  .swiper {
+    width: 100%;
+    // overflow: visible;
+  }
+
+  .swiper-button {
+    @include mix.swiper-button;
+  }
+
+  .swiper-slide {
+    transition: all 0.3s ease;
+    opacity: 70%;
+    // pointer-events: none;
+    transform: scale(0.9);
+    transform-origin: center center;
+
+    &-active {
+      z-index: 2;
+      opacity: 100%;
+      pointer-events: initial;
+      transform: scale(1.1);
+
+      .link-publikasi {
+        display: block;
+      }
+    }
+  }
+
+  .link-publikasi {
+    display: none;
+  }
+
+  .swiper-button-prev {
+    left: 2rem;
+  }
+
+  .swiper-button-next {
+    right: 2rem;
   }
 }

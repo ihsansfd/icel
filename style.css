@@ -10107,9 +10107,34 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: SegoeUI;
+  src: local("Segoe UI Light"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: SegoeUI;
+  src: local("Segoe UI Semilight"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: SegoeUI;
+  src: local("Segoe UI"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: SegoeUI;
+  src: local("Segoe UI Semibold"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: SegoeUI;
+  src: local("Segoe UI Bold"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2) format("woff2"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff) format("woff"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf) format("truetype");
+  font-weight: 700;
+}
 body {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "SegoeUI", "Roboto", sans-serif;
 }
 
 .dropdown-menu.li {
@@ -10137,6 +10162,8 @@ section {
 }
 
 .section-title {
+  text-align: center;
+  font-weight: 700;
   font-size: 1.5625rem;
 }
 
@@ -10144,7 +10171,7 @@ section {
   color: #5a5a5a;
   text-align: center;
   padding-bottom: 1.2rem;
-  max-width: 50%;
+  max-width: max(50%, 25rem);
   margin: 0 auto;
 }
 
@@ -10152,6 +10179,11 @@ section {
   text-align: center;
   font-weight: 700;
   font-size: 1.5625rem;
+}
+
+.btn {
+  width: max-content;
+  padding: 0.5rem 1rem;
 }
 
 .primary-carousel {
@@ -10190,6 +10222,7 @@ section {
   width: 60%;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .primary-carousel .carousel-inner .carousel-cta h3.sub-title {
@@ -10199,6 +10232,7 @@ section {
 .primary-carousel .carousel-inner .carousel-cta h2.title {
   margin-bottom: 0.5rem;
   font-size: 2rem;
+  font-weight: 600;
 }
 @media (min-width: 992px) {
   .primary-carousel .carousel-inner .carousel-cta h2.title {
@@ -10218,112 +10252,297 @@ section {
 .publikasi {
   background-color: #f4f7fa;
 }
-.publikasi .col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  max-width: min(30rem, 32%);
-  min-width: 20rem;
-  min-height: 15rem;
-  cursor: pointer;
-  transition: 600ms;
-}
-.publikasi .col:hover {
-  scale: 110%;
-  border-top: 3px solid #00a365;
-  border-bottom: 3px solid #00a365;
-}
-.publikasi .publikasi-icon {
-  font-size: 1.75rem;
-}
-.publikasi .publikasi-symbol {
-  width: 4rem;
-  height: 4rem;
-  background-color: #00a365;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
-}
-.publikasi .publikasi-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-.publikasi p {
-  color: #6c757d;
-}
-
-.kabar .category .col {
-  padding: 0.7rem 2rem;
-  white-space: nowrap;
-  max-width: max-content;
-  border-radius: 0.5rem;
-  background-color: #f4f7fa;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 600ms;
-}
-.kabar .category .col.active, .kabar .category .col:hover {
-  background-color: #00a365;
+.publikasi .link-publikasi a {
+  text-decoration: none;
   color: white;
 }
-.kabar .latest-posts .col {
-  min-width: 20rem;
-  max-width: min(30rem, 32%);
-  height: 14.0625rem;
-  background-image: url("../../../assets/img/posts/default.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 0.5rem;
+.publikasi .link-publikasi:hover a {
+  color: initial;
+}
+.publikasi .card {
+  width: 18rem !important;
+  height: 22rem;
+  color: white;
+  padding: 3.125rem 1.875rem;
+  border-top-right-radius: 30px 30px;
   position: relative;
-  transition: 600ms;
+  overflow: hidden;
+  border: none;
+  transition: 500ms;
 }
-.kabar .latest-posts .col:hover {
-  background-size: 120%;
+.publikasi .card-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
-.kabar .latest-posts .col .content {
+.publikasi .card-description {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.publikasi .card-buku {
+  background-color: #00a365;
+}
+.publikasi .card-seri-analisis {
+  background-color: #e6d422;
+}
+.publikasi .card-pendapat-hukum {
+  background-color: #a822e6;
+}
+.publikasi .card-infografis {
+  background-color: #fc6f32;
+}
+.publikasi .card-kertas-kebijakan {
+  background-color: #26bffe;
+}
+.publikasi .card-symbol {
+  display: block;
   position: absolute;
-  bottom: 1rem;
-  max-width: 90%;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 0.3rem;
+  font-size: 10rem;
+  bottom: -0.625rem;
+  right: -1.25rem;
+  opacity: 30%;
 }
-.kabar .latest-posts .col .content .content-category {
+.publikasi .slide-content {
+  padding: 2rem;
+}
+.publikasi .swiper {
+  width: 100%;
+}
+.publikasi .swiper-button {
+  background-color: #d9d9d9;
+  opacity: 70%;
+  padding: 2rem;
+  border-radius: 60%;
+}
+.publikasi .swiper-button::after {
+  font-size: 1.875rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #7e8082;
 }
-.kabar .latest-posts .col .content .content-title {
-  font-size: 1rem;
-  font-weight: 600;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  cursor: pointer;
+.publikasi .swiper-button:hover::after {
+  color: #5a5a5a;
 }
-.kabar .latest-posts .col .content .content-title:hover {
-  text-decoration: underline;
+.publikasi .swiper-button:hover {
+  opacity: 100%;
+}
+.publikasi .swiper-slide {
+  transition: all 0.3s ease;
+  opacity: 70%;
+  transform: scale(0.9);
+  transform-origin: center center;
+}
+.publikasi .swiper-slide-active {
+  z-index: 2;
+  opacity: 100%;
+  pointer-events: initial;
+  transform: scale(1.1);
+}
+.publikasi .swiper-slide-active .link-publikasi {
+  display: block;
+}
+.publikasi .link-publikasi {
+  display: none;
+}
+.publikasi .swiper-button-prev {
+  left: 2rem;
+}
+.publikasi .swiper-button-next {
+  right: 2rem;
+}
+
+.kabar .card {
+  padding: 0;
+  width: 80%;
+}
+.kabar .card img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .kabar .card {
+    width: 18rem;
+  }
+}
+.kabar .card-title {
+  text-overflow: ellipsis;
+  font-weight: 700;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-height: 7rem;
+}
+.kabar .card-subtitle {
+  font-weight: 600;
+}
+.kabar .card-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-height: 7rem;
+}
+.kabar .card-body {
+  padding: 2rem;
 }
 
 .footer-section {
+  padding-top: 6rem !important;
   background-color: #081828;
   color: white;
+  font-size: 0.9rem;
+}
+.footer-section .title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.3rem;
+}
+.footer-section .widget-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer-section .media-sosial-icon-container {
+  font-size: 1rem;
+}
+.footer-section .media-sosial-icon {
+  display: inline-block;
+  background-color: #00a365;
+  padding: 1rem;
+  border-radius: 60%;
+  position: relative;
+}
+.footer-section .fa-brands {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer-widget {
-  min-width: 20rem;
-  max-width: min(30rem, 32%);
+  min-width: 15rem;
+  max-width: 80%;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
-.footer-widget .title {
-  font-size: 1.5rem;
-  margin-bottom: 2.125rem;
+.footer-widget:nth-child(4) {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .footer-widget {
+    max-width: min(30rem, 24%);
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .footer-widget:nth-child(4) {
+    margin-bottom: 0rem;
+  }
+}
+
+.kalender-kegiatan {
+  background-color: #f4f7fa;
+}
+.kalender-kegiatan .kalendar-container {
+  max-height: 50rem;
+}
+@media (min-width: 768px) {
+  .kalender-kegiatan .kalendar-container {
+    max-height: 26rem;
+  }
+}
+.kalender-kegiatan .kalendar-card {
+  width: 80% !important;
+  margin: 0 auto;
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
+}
+.kalender-kegiatan .kalendar-card:nth-child(1n) .kalendar-date-content {
+  background-color: #00a365;
+}
+.kalender-kegiatan .kalendar-card:nth-child(2n) .kalendar-date-content {
+  background-color: #e6d422;
+}
+.kalender-kegiatan .kalendar-card:nth-child(3n) .kalendar-date-content {
+  background-color: #a822e6;
+}
+.kalender-kegiatan .kalendar-card:nth-child(4n) .kalendar-date-content {
+  background-color: #fc6f32;
+}
+.kalender-kegiatan .kalendar-card:nth-child(5n) .kalendar-date-content {
+  background-color: #26bffe;
+}
+.kalender-kegiatan .kalendar-date-content {
+  color: white;
+}
+.kalender-kegiatan .kalendar-date {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+.kalender-kegiatan .kalendar-month-year {
+  margin: 0;
+  padding: 0;
+}
+.kalender-kegiatan .card-title {
+  text-overflow: ellipsis;
+  font-weight: 700;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-height: 7rem;
+}
+.kalender-kegiatan .kalendar-detail-info {
+  font-size: 0.8rem;
+}
+.kalender-kegiatan .kalendar-detail-info > * {
+  margin-right: 1.5rem;
+}
+.kalender-kegiatan .swiper-button {
+  background-color: #d9d9d9;
+  opacity: 70%;
+  padding: 2rem;
+  border-radius: 60%;
+}
+.kalender-kegiatan .swiper-button::after {
+  font-size: 1.875rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #7e8082;
+}
+.kalender-kegiatan .swiper-button:hover::after {
+  color: #5a5a5a;
+}
+.kalender-kegiatan .swiper-button:hover {
+  opacity: 100%;
+}
+.kalender-kegiatan .swiper-button-prev-kalendar::after {
+  writing-mode: vertical-rl;
+}
+.kalender-kegiatan .swiper-button-next-kalendar::after {
+  writing-mode: vertical-rl;
+}
+
+.map-icel .map-container {
+  height: 22.75rem;
+  width: 80%;
+}
+.map-icel iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /*!

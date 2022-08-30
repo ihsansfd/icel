@@ -1,0 +1,97 @@
+@use "../custom" as c;
+@use "../mixins" as mix;
+
+.kalender-kegiatan {
+  background-color: c.$grey-light;
+
+  .kalendar-container {
+    max-height: 50rem;
+
+    @include c.media-breakpoint-up(md) {
+      max-height: 26rem;
+    }
+  }
+
+  .kalendar-card {
+    width: 80% !important;
+    margin: 0 auto;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
+
+    &:nth-child(1n) {
+      .kalendar-date-content {
+        background-color: c.$primary;
+      }
+    }
+
+    &:nth-child(2n) {
+      .kalendar-date-content {
+        background-color: c.$primary-2;
+      }
+    }
+
+    &:nth-child(3n) {
+      .kalendar-date-content {
+        background-color: c.$primary-3;
+      }
+    }
+
+    &:nth-child(4n) {
+      .kalendar-date-content {
+        background-color: c.$primary-4;
+      }
+    }
+
+    &:nth-child(5n) {
+      .kalendar-date-content {
+        background-color: c.$primary-5;
+      }
+    }
+  }
+
+  .kalendar-date-content {
+    color: white;
+  }
+
+  .kalendar-date {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .kalendar-month-year {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-title {
+    @include mix.card-title;
+  }
+
+  .kalendar-detail-info {
+    font-size: 0.8rem;
+
+    & > * {
+      margin-right: 1.5rem;
+    }
+  }
+
+  .swiper-button {
+    @include mix.swiper-button;
+  }
+
+  .swiper-button-prev-kalendar {
+    &::after {
+      writing-mode: vertical-rl;
+    }
+  }
+
+  .swiper-button-next-kalendar {
+    &::after {
+      writing-mode: vertical-rl;
+    }
+  }
+}

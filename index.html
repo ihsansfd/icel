@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/swiperjs/css/swiper-bundle.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <script src="assets/bootstrap/js/bootstrap.js" defer></script>
-    <script src="script.js"></script>
+    <script src="assets/swiperjs/js/swiper-bundle.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main>
@@ -97,46 +99,95 @@
       <section id="publikasi-section" class="publikasi">
         <div class="container">
           <h2 class="section-title">Publikasi ICEL</h2>
-          <div
-            class="row gap-3 mt-4 justify-content-center justify-content-xl-start"
-          >
-            <div class="col col-md-6 col-lg-4 shadow-sm">
-              <div class="publikasi-symbol">
-                <i class="publikasi-icon fa-solid fa-book"></i>
+          <p class="section-description">
+            Menampilkan publikasi-publikasi ICEL. Klik salah satu kategori yang
+            tersedia untuk melihat daftar publikasi pada kategori yang dipilih.
+          </p>
+        </div>
+        <div class="slide-container swiper">
+          <div class="slide-content slide-content-publikasi">
+            <div class="card-wrapper swiper-wrapper">
+              <div class="card card-buku shadow swiper-slide">
+                <div class="card-content">
+                  <div class="card-title lead">Buku</div>
+                  <div class="card-description lead">
+                    Telusuri publikasi-publikasi buku kami.
+                  </div>
+                </div>
+                <div class="link-publikasi mt-3 btn btn-outline-light">
+                  <a href="#"
+                    >Telusuri <i class="fa-solid fa-circle-arrow-right"></i
+                  ></a>
+                </div>
+                <i class="card-symbol fa-solid fa-book"></i>
               </div>
-              <h3 class="publikasi-title">Buku</h3>
-              <p>Lihat semua publikasi buku ICEL</p>
-            </div>
-            <div class="col col-md-6 col-lg-4 shadow-sm">
-              <div class="publikasi-symbol">
-                <i class="publikasi-icon fa-solid fa-scroll"></i>
+              <div class="card card-seri-analisis shadow swiper-slide">
+                <div class="card-content">
+                  <div class="card-title lead">Seri Analisis</div>
+                  <div class="card-description lead">
+                    Telusuri publikasi-publikasi seri analisis kami.
+                  </div>
+                </div>
+                <div class="link-publikasi mt-3 btn btn-outline-light">
+                  <a href="#"
+                    >Telusuri <i class="fa-solid fa-circle-arrow-right"></i
+                  ></a>
+                </div>
+                <i class="card-symbol fa-solid fa-chart-column"></i>
               </div>
-              <h3 class="publikasi-title">Kertas Kebijakan</h3>
-              <p>Lihat semua publikasi kertas kebijakan</p>
-            </div>
-            <div class="col col-md-6 col-lg-4 shadow-sm">
-              <div class="publikasi-symbol">
-                <i class="publikasi-icon fa-solid fa-building-columns"></i>
+              <div class="card card-pendapat-hukum shadow swiper-slide">
+                <div class="card-content">
+                  <div class="card-title lead">Pendapat Hukum</div>
+                  <div class="card-description lead">
+                    Telusuri publikasi-publikasi pendapat hukum kami.
+                  </div>
+                </div>
+                <div class="link-publikasi mt-3 btn btn-outline-light">
+                  <a href="#"
+                    >Telusuri <i class="fa-solid fa-circle-arrow-right"></i
+                  ></a>
+                </div>
+                <i class="card-symbol fa-solid fa-building-columns"></i>
               </div>
-              <h3 class="publikasi-title">Pendapat Hukum</h3>
-              <p>Lihat semua publikasi pendapat hukum</p>
-            </div>
-            <div class="col col-md-6 col-lg-4 shadow-sm">
-              <div class="publikasi-symbol">
-                <i class="publikasi-icon fa-solid fa-chart-bar"></i>
+              <div class="card card-infografis shadow swiper-slide">
+                <div class="card-content">
+                  <div class="card-title lead">Infografis</div>
+                  <div class="card-description lead">
+                    Telusuri publikasi-publikasi infografis kami.
+                  </div>
+                </div>
+                <div class="link-publikasi mt-3 btn btn-outline-light">
+                  <a href="#"
+                    >Telusuri <i class="fa-solid fa-circle-arrow-right"></i
+                  ></a>
+                </div>
+                <i class="card-symbol fa-solid fa-chart-pie"></i>
               </div>
-              <h3 class="publikasi-title">Seri Analisis</h3>
-              <p>Lihat semua publikasi seri analisis</p>
-            </div>
-            <div class="col col-md-6 col-lg-4 shadow-sm">
-              <div class="publikasi-symbol">
-                <i class="publikasi-icon fa-solid fa-chart-pie"></i>
+              <div class="card card-kertas-kebijakan shadow swiper-slide">
+                <div class="card-content">
+                  <div class="card-title lead">Kertas Kebijakan</div>
+                  <div class="card-description lead">
+                    Telusuri publikasi-publikasi kertas kebijakan kami.
+                  </div>
+                </div>
+                <div class="link-publikasi mt-3 btn btn-outline-light">
+                  <a href="#"
+                    >Telusuri <i class="fa-solid fa-circle-arrow-right"></i
+                  ></a>
+                </div>
+                <i class="card-symbol fa-solid fa-scroll"></i>
               </div>
-              <h3 class="publikasi-title">Infografis</h3>
-              <p>Lihat semua publikasi infografis</p>
             </div>
           </div>
+          <!-- If we need navigation buttons -->
+          <div
+            class="swiper-button swiper-button-prev swiper-button-prev-publikasi"
+          ></div>
+          <div
+            class="swiper-button swiper-button-next swiper-button-next-publikasi"
+          ></div>
         </div>
+        <!-- </div> -->
       </section>
       <!-- End Publikasi Section  -->
       <!-- Kabar Section -->
@@ -147,125 +198,465 @@
             Menampilkan daftar Kabar ICEL terbaru, klik tombol dibawah ini untuk
             melihat Kabar ICEL dalam kategori.
           </p>
-          <div class="category row gap-2 justify-content-center pb-4">
-            <div class="col active">Semua</div>
-            <div class="col">Siaran Pers</div>
-            <div class="col">ICEL dalam Berita</div>
-            <div class="col">Pengumuman</div>
-            <div class="col">Kegiatan</div>
-            <div class="col">Karier</div>
+          <div class="row kabar-container justify-content-center gap-3">
+            <div class="col-12 w-sm-100 card col-md-4 border border-2">
+              <img
+                src="./assets/img/posts/default.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-primary">Siaran Pers</h6>
+                <h5 class="card-title">
+                  [Siaran Pers] Tindak Pidana LH dan Korporasi dalam RKUHP:
+                  Kemunduran Penegakan Hukum LH dan Ancaman Bagi Perlindungan
+                  Lingkungan Hidup
+                </h5>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Saepe, dolores, magnam qui illo velit temporibus soluta
+                  dolorum quaerat possimus distinctio consectetur officiis! Aut
+                  sed odio ipsum, dolorem molestias expedita, laboriosam ullam
+                  debitis placeat consequatur labore adipisci? Voluptate
+                  temporibus distinctio unde?
+                </p>
+              </div>
+            </div>
+            <div class="col-12 w-sm-100 card col-md-4 border border-2">
+              <img
+                src="./assets/img/posts/default.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-primary">
+                  ICEL dalam Berita
+                </h6>
+                <h5 class="card-title">
+                  [Siaran Pers] Tindak Pidana LH dan Korporasi dalam RKUHP:
+                  Kemunduran Penegakan Hukum LH dan Ancaman Bagi Perlindungan
+                  Lingkungan Hidup
+                </h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 w-sm-100 card col-md-4 border border-2">
+              <img
+                src="./assets/img/posts/default.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-primary">Kegiatan</h6>
+                <h5 class="card-title">
+                  [Siaran Pers] Tindak Pidana LH dan Korporasi dalam RKUHP:
+                  Kemunduran Penegakan Hukum LH dan Ancaman Bagi Perlindungan
+                  Lingkungan Hidup
+                </h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+                  magnam minus quae. Deserunt minus repudiandae impedit quasi
+                  architecto quibusdam odio?
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="latest-posts row gap-3 justify-content-center">
-            <div class="col col-md-6 col-lg-4">
-              <div class="content shadow">
-                <p class="content-category">Siaran Pers</p>
-                <h3 class="content-title">
-                  [Siaran Pers] Kemenangan Gugatan Banjir Palembang
-                </h3>
-              </div>
-            </div>
-            <div class="col col-md-6 col-lg-4">
-              <div class="content shadow">
-                <p class="content-category">Siaran Pers</p>
-                <h3 class="content-title">
-                  [Siaran Pers] Kemenangan Gugatan Banjir Palembang
-                </h3>
-              </div>
-            </div>
-            <div class="col col-md-6 col-lg-4">
-              <div class="content shadow">
-                <p class="content-category">Siaran Pers</p>
-                <h3 class="content-title">
-                  [Siaran Pers] Kemenangan Gugatan Banjir Palembang
-                </h3>
-              </div>
-            </div>
-            <div class="col col-md-6 col-lg-4">
-              <div class="content shadow">
-                <p class="content-category">Siaran Pers</p>
-                <h3 class="content-title">
-                  [Siaran Pers] Kemenangan Gugatan Banjir Palembang
-                </h3>
-              </div>
-            </div>
-            <div class="col col-md-6 col-lg-4">
-              <div class="content shadow">
-                <p class="content-category">Siaran Pers</p>
-                <h3 class="content-title">
-                  [Siaran Pers] Kemenangan Gugatan Banjir Palembang
-                </h3>
-              </div>
-            </div>
-            <div class="col col-md-6 col-lg-4">
-              <div class="content shadow">
-                <p class="content-category">Siaran Pers</p>
-                <h3 class="content-title">
-                  [Siaran Pers] Kemenangan Gugatan Banjir Palembang
-                </h3>
-              </div>
-            </div>
+          <div
+            class="btn-lihat-kabar mt-4 btn btn-outline-light text-dark border-2 border mx-auto d-block fw-bold"
+          >
+            Lihat Kabar ICEL Lainnya
           </div>
         </div>
       </section>
       <!-- End Kabar Section -->
+
+      <!-- Kalender Kegiatan Section -->
+      <section id="kalender-kegiatan-section" class="kalender-kegiatan">
+        <div class="container">
+          <h2 class="section-title">Kalender Kegiatan ICEL</h2>
+          <p class="section-description">
+            Ikuti perkembangan kegiatan-kegiatan terbaru kami.
+          </p>
+
+          <!-- Slider main container -->
+          <div class="kalendar-container swiper">
+            <!-- Additional required wrapper -->
+            <div class="slide-content slide-content-kalendar">
+              <div class="kalendar-wrapper swiper-wrapper">
+                <!-- Slides -->
+                <div class="card kalendar-card swiper-slide shadow-sm">
+                  <div class="row kalendar-content g-0">
+                    <div
+                      class="col-12 col-md-3 kalendar-date-content d-flex justify-content-center align-items-center p-3"
+                    >
+                      <div class="kalendar-date-content-wrapper">
+                        <div class="kalendar-date mx-auto text-center">13</div>
+                        <div class="kalendar-month-year mx-auto text-center">
+                          Sept 2022
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 col-md-9 card-body kalendar-detail-content ps-5 d-flex align-items-center"
+                    >
+                      <div class="card-body-wrapper">
+                        <div class="card-title lead">
+                          Biodiversity Litigation
+                        </div>
+                        <div class="kalendar-detail-info">
+                          <div class="kalendar-detail-info-time d-inline-block">
+                            <i class="fa-solid fa-clock"></i> 8.00 AM - 12.00 PM
+                          </div>
+                          <div
+                            class="kalendar-detail-info-location d-inline-block"
+                          >
+                            <i class="fa-solid fa-location-dot"></i> Jakarta
+                            Convention Center
+                          </div>
+                          <div
+                            class="kalendar-detail-info-organizer d-inline-block"
+                          >
+                            <i class="fa-solid fa-user"></i> Bapak John Doe
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card kalendar-card swiper-slide shadow-sm">
+                  <div class="row kalendar-content g-0">
+                    <div
+                      class="col-12 col-md-3 kalendar-date-content d-flex justify-content-center align-items-center p-3"
+                    >
+                      <div class="kalendar-date-content-wrapper">
+                        <div class="kalendar-date mx-auto text-center">13</div>
+                        <div class="kalendar-month-year mx-auto text-center">
+                          Sept 2022
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 col-md-9 card-body kalendar-detail-content ps-5 d-flex align-items-center"
+                    >
+                      <div class="card-body-wrapper">
+                        <div class="card-title lead">
+                          Biodiversity Litigation
+                        </div>
+                        <div class="kalendar-detail-info">
+                          <div class="kalendar-detail-info-time d-inline-block">
+                            <i class="fa-solid fa-clock"></i> 8.00 AM - 12.00 PM
+                          </div>
+                          <div
+                            class="kalendar-detail-info-location d-inline-block"
+                          >
+                            <i class="fa-solid fa-location-dot"></i> Jakarta
+                            Convention Center
+                          </div>
+                          <div
+                            class="kalendar-detail-info-organizer d-inline-block"
+                          >
+                            <i class="fa-solid fa-user"></i> Bapak John Doe
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card kalendar-card swiper-slide shadow-sm">
+                  <div class="row kalendar-content g-0">
+                    <div
+                      class="col-12 col-md-3 kalendar-date-content d-flex justify-content-center align-items-center p-3"
+                    >
+                      <div class="kalendar-date-content-wrapper">
+                        <div class="kalendar-date mx-auto text-center">13</div>
+                        <div class="kalendar-month-year mx-auto text-center">
+                          Sept 2022
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 col-md-9 card-body kalendar-detail-content ps-5 d-flex align-items-center"
+                    >
+                      <div class="card-body-wrapper">
+                        <div class="card-title lead">
+                          Biodiversity Litigation
+                        </div>
+                        <div class="kalendar-detail-info">
+                          <div class="kalendar-detail-info-time d-inline-block">
+                            <i class="fa-solid fa-clock"></i> 8.00 AM - 12.00 PM
+                          </div>
+                          <div
+                            class="kalendar-detail-info-location d-inline-block"
+                          >
+                            <i class="fa-solid fa-location-dot"></i> Jakarta
+                            Convention Center
+                          </div>
+                          <div
+                            class="kalendar-detail-info-organizer d-inline-block"
+                          >
+                            <i class="fa-solid fa-user"></i> Bapak John Doe
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card kalendar-card swiper-slide shadow-sm">
+                  <div class="row kalendar-content g-0">
+                    <div
+                      class="col-12 col-md-3 kalendar-date-content d-flex justify-content-center align-items-center p-3"
+                    >
+                      <div class="kalendar-date-content-wrapper">
+                        <div class="kalendar-date mx-auto text-center">13</div>
+                        <div class="kalendar-month-year mx-auto text-center">
+                          Sept 2022
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 col-md-9 card-body kalendar-detail-content ps-5 d-flex align-items-center"
+                    >
+                      <div class="card-body-wrapper">
+                        <div class="card-title lead">
+                          Biodiversity Litigation
+                        </div>
+                        <div class="kalendar-detail-info">
+                          <div class="kalendar-detail-info-time d-inline-block">
+                            <i class="fa-solid fa-clock"></i> 8.00 AM - 12.00 PM
+                          </div>
+                          <div
+                            class="kalendar-detail-info-location d-inline-block"
+                          >
+                            <i class="fa-solid fa-location-dot"></i> Jakarta
+                            Convention Center
+                          </div>
+                          <div
+                            class="kalendar-detail-info-organizer d-inline-block"
+                          >
+                            <i class="fa-solid fa-user"></i> Bapak John Doe
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card kalendar-card swiper-slide shadow-sm">
+                  <div class="row kalendar-content g-0">
+                    <div
+                      class="col-12 col-md-3 kalendar-date-content d-flex justify-content-center align-items-center p-3"
+                    >
+                      <div class="kalendar-date-content-wrapper">
+                        <div class="kalendar-date mx-auto text-center">13</div>
+                        <div class="kalendar-month-year mx-auto text-center">
+                          Sept 2022
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 col-md-9 card-body kalendar-detail-content ps-5 d-flex align-items-center"
+                    >
+                      <div class="card-body-wrapper">
+                        <div class="card-title lead">
+                          Biodiversity Litigation
+                        </div>
+                        <div class="kalendar-detail-info">
+                          <div class="kalendar-detail-info-time d-inline-block">
+                            <i class="fa-solid fa-clock"></i> 8.00 AM - 12.00 PM
+                          </div>
+                          <div
+                            class="kalendar-detail-info-location d-inline-block"
+                          >
+                            <i class="fa-solid fa-location-dot"></i> Jakarta
+                            Convention Center
+                          </div>
+                          <div
+                            class="kalendar-detail-info-organizer d-inline-block"
+                          >
+                            <i class="fa-solid fa-user"></i> Bapak John Doe
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card kalendar-card swiper-slide shadow-sm">
+                  <div class="row kalendar-content g-0">
+                    <div
+                      class="col-12 col-md-3 kalendar-date-content d-flex justify-content-center align-items-center p-3"
+                    >
+                      <div class="kalendar-date-content-wrapper">
+                        <div class="kalendar-date mx-auto text-center">13</div>
+                        <div class="kalendar-month-year mx-auto text-center">
+                          Sept 2022
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 col-md-9 card-body kalendar-detail-content ps-5 d-flex align-items-center"
+                    >
+                      <div class="card-body-wrapper">
+                        <div class="card-title lead">
+                          Biodiversity Litigation
+                        </div>
+                        <div class="kalendar-detail-info">
+                          <div class="kalendar-detail-info-time d-inline-block">
+                            <i class="fa-solid fa-clock"></i> 8.00 AM - 12.00 PM
+                          </div>
+                          <div
+                            class="kalendar-detail-info-location d-inline-block"
+                          >
+                            <i class="fa-solid fa-location-dot"></i> Jakarta
+                            Convention Center
+                          </div>
+                          <div
+                            class="kalendar-detail-info-organizer d-inline-block"
+                          >
+                            <i class="fa-solid fa-user"></i> Bapak John Doe
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card kalendar-card swiper-slide shadow-sm">
+                  <div class="row kalendar-content g-0">
+                    <div
+                      class="col-12 col-md-3 kalendar-date-content d-flex justify-content-center align-items-center p-3"
+                    >
+                      <div class="kalendar-date-content-wrapper">
+                        <div class="kalendar-date mx-auto text-center">13</div>
+                        <div class="kalendar-month-year mx-auto text-center">
+                          Sept 2022
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 col-md-9 card-body kalendar-detail-content ps-5 d-flex align-items-center"
+                    >
+                      <div class="card-body-wrapper">
+                        <div class="card-title lead">
+                          Biodiversity Litigation
+                        </div>
+                        <div class="kalendar-detail-info">
+                          <div class="kalendar-detail-info-time d-inline-block">
+                            <i class="fa-solid fa-clock"></i> 8.00 AM - 12.00 PM
+                          </div>
+                          <div
+                            class="kalendar-detail-info-location d-inline-block"
+                          >
+                            <i class="fa-solid fa-location-dot"></i> Jakarta
+                            Convention Center
+                          </div>
+                          <div
+                            class="kalendar-detail-info-organizer d-inline-block"
+                          >
+                            <i class="fa-solid fa-user"></i> Bapak John Doe
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div
+              class="swiper-button swiper-button-prev swiper-button-prev-kalendar"
+            ></div>
+            <div
+              class="swiper-button swiper-button-next swiper-button-next-kalendar"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Kalender Kegiatan Section -->
+
+      <section id="map-section" class="map-icel">
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="map-container p-3 shadow-sm border border-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1943407308495!2d106.78864831443909!3d-6.238096995484485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f13e3aa4b24b%3A0x1a051e6a02606a3!2sIndonesian%20Centre%20for%20Environmental%20Law%20(ICEL)!5e0!3m2!1sen!2sid!4v1661823769885!5m2!1sen!2sid"
+              style="border: 0"
+              allowfullscreen="true"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer-section pt-5 pb-2">
       <div class="container">
-        <div
-          class="row gap-3 footer-widgets justify-content-center justify-content-md-start"
-        >
-          <div class="col col-md-4 footer-widget">
-            <h3 class="title">Kontak Kami</h3>
-            <div class="widget-content">
-              <img
-                src="./assets/img/footer/barcode.png"
-                alt="Barcode"
-                class="barcode"
-                width="120"
-                height="150"
-                style="float: left; margin-right: 1.5rem"
-              />
-              <p>
-                Jl. Dempo II No.21, RT.10/RW.3, Gunung, Kec. Kby. Baru, Kota
-                Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12120 : (021)
-                7233390 : 0221-7269331 : info@icel.or.id
-              </p>
+        <div class="row gap-3 footer-widgets">
+          <div class="col-12 col-md-3 footer-widget">
+            <h3 class="title">Tentang Kami</h3>
+            <div class="widget-content d-flex">
+              <div class="profil-container me-5">
+                <h4 class="widget-section-title">Profil</h4>
+                <ul>
+                  <li>Sejarah</li>
+                  <li>Visi Misi</li>
+                  <li>Strategi</li>
+                  <li>Capaian</li>
+                </ul>
+              </div>
+              <div class="organisasi-container">
+                <h4 class="widget-section-title">Struktur Organisasi</h4>
+                <ul>
+                  <li>Dewan</li>
+                  <li>Badan Pelaksana</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col col-md-4 footer-widget">
-            <h3 class="title">Kontak Kami</h3>
+          <div class="col-12 col-md-3 footer-widget">
+            <h3 class="title">Lainnya</h3>
             <div class="widget-content">
-              <img
-                src="./assets/img/footer/barcode.png"
-                alt="Barcode"
-                class="barcode"
-                width="120"
-                height="150"
-                style="float: left; margin-right: 1.5rem"
-              />
-              <p>
-                Jl. Dempo II No.21, RT.10/RW.3, Gunung, Kec. Kby. Baru, Kota
-                Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12120 : (021)
-                7233390 : 0221-7269331 : info@icel.or.id
-              </p>
+              <ul>
+                <li>Syarat & Ketentuan</li>
+                <li>Privasi</li>
+                <li>Karier</li>
+              </ul>
             </div>
           </div>
-          <div class="col col-md-4 footer-widget">
+          <div class="col-12 col-md-3 footer-widget">
             <h3 class="title">Kontak Kami</h3>
+            <div class="widget-content d-flex">
+              <div class="location-symbol me-2">
+                <i class="fa-solid fa-location-dot text-primary"></i>
+              </div>
+              Jl. Dempo II No.21, RT.10/RW.3, Gunung, Kec. Kby. Baru, Kota
+              Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12120 : (021)
+              7233390 : 0221-7269331 : info@icel.or.id
+            </div>
+          </div>
+          <div class="col-12 col-md-3 footer-widget">
+            <h3 class="title">Media Sosial</h3>
             <div class="widget-content">
-              <img
-                src="./assets/img/footer/barcode.png"
-                alt="Barcode"
-                class="barcode"
-                width="120"
-                height="150"
-                style="float: left; margin-right: 1.5rem"
-              />
-              <p>
-                Jl. Dempo II No.21, RT.10/RW.3, Gunung, Kec. Kby. Baru, Kota
-                Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12120 : (021)
-                7233390 : 0221-7269331 : info@icel.or.id
-              </p>
+              <div class="media-sosial-cta">Tetap terhubung dengan kami.</div>
+              <div class="media-sosial-icon-container mt-2">
+                <div class="media-sosial-icon">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="media-sosial-icon">
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="media-sosial-icon">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="media-sosial-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="media-sosial-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="media-sosial-icon">
+                  <i class="fa-brands fa-spotify"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
