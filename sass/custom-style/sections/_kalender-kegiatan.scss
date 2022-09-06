@@ -5,15 +5,17 @@
   background-color: c.$grey-light;
 
   .kalendar-container {
-    max-height: 50rem;
+    max-height: 33rem;
+    max-width: 65rem;
 
     @include c.media-breakpoint-up(md) {
-      max-height: 26rem;
+      max-height: 17rem;
     }
   }
 
   .kalendar-card {
     width: 80% !important;
+    max-width: 50rem;
     margin: 0 auto;
     height: -webkit-max-content !important;
     height: -moz-max-content !important;

@@ -1,0 +1,11 @@
+@use "../custom" as c;
+
+a {
+  transition: 300ms all;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.page-dark {
+  background-color: c.$grey-light;
+}

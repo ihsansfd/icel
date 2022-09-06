@@ -1,5 +1,6 @@
 @use "./custom" as c;
 
+// card
 @mixin card-title {
   text-overflow: ellipsis;
   font-weight: 700;
@@ -10,6 +11,7 @@
   max-height: 7rem;
 }
 
+//swipper
 @mixin swiper-button {
   background-color: c.$grey-light-500;
   opacity: 70%;
@@ -31,4 +33,58 @@
   &:hover {
     opacity: 100%;
   }
+}
+
+//card posts
+@mixin card-posts {
+  .card {
+    padding: 0;
+    img {
+      width: 100%;
+    }
+
+    width: 80%;
+    @include c.media-breakpoint-up(md) {
+      // min-width: 18rem;
+      max-width: 20rem;
+    }
+  }
+
+  .card-title {
+    @include card-title;
+  }
+
+  .card-subtitle {
+    font-weight: 600;
+  }
+
+  .card-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    max-height: 7rem;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+}
+
+// social media icon
+@mixin media-social-icon {
+  display: inline-block;
+  background-color: c.$primary;
+  padding: 1rem;
+  border-radius: 60%;
+  position: relative;
+}
+
+@mixin fa-brands {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

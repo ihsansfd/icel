@@ -1,1 +1,9 @@
-@use '../custom' as c;
+@use "../custom" as c;
+
+.btn-lihat-detail {
+  background-color: white;
+  transition: 600ms all;
+  &:hover {
+    color: c.$primary !important;
+  }
+}

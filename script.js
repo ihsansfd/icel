@@ -16,7 +16,7 @@ var swiperPublikasi = new Swiper(".slide-content-publikasi", {
 
 var swiperKalendar = new Swiper(".slide-content-kalendar", {
   direction: "vertical",
-  slidesPerView: 3,
+  slidesPerView: 4,
   slidesPerGroup: 1,
   spaceBetween: 20,
   pagination: {

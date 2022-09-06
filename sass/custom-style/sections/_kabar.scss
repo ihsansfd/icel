@@ -2,36 +2,5 @@
 @use "../mixins" as mix;
 
 .kabar {
-  .card {
-    padding: 0;
-    img {
-      width: 100%;
-    }
-
-    width: 80%;
-    @include c.media-breakpoint-up(md) {
-      width: 18rem;
-    }
-  }
-
-  .card-title {
-    @include mix.card-title;
-  }
-
-  .card-subtitle {
-    font-weight: 600;
-  }
-
-  .card-text {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    max-height: 7rem;
-  }
-
-  .card-body {
-    padding: 2rem;
-  }
+  @include mix.card-posts;
 }

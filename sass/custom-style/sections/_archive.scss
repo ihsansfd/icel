@@ -1,0 +1,15 @@
+@use "../custom" as c;
+@use "../mixins" as mix;
+
+.archive {
+  @include mix.card-posts;
+
+  .row {
+    width: auto;
+  }
+
+  .card {
+    // background-color: c.$grey-light;
+    // border: none;
+  }
+}

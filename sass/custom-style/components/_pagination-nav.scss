@@ -1,0 +1,36 @@
+@use "../custom" as c;
+
+.pagination-nav {
+  .disabled {
+    display: none;
+  }
+
+  .active {
+    .page-link {
+      background-color: c.$icel_secondary;
+      border: 1px solid #dee2e6;
+    }
+  }
+
+  width: max-content;
+  margin: 0 auto;
+
+  @include c.media-breakpoint-up(xl) {
+    margin-left: auto;
+    margin-right: 9.1rem;
+  }
+  .page-item {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .page-link {
+    color: currentColor;
+    background-color: white;
+    margin: 0 0.4rem;
+
+    &:hover {
+      background-color: c.$primary;
+      color: white;
+    }
+  }
+}

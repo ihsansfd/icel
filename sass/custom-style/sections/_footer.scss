@@ -1,4 +1,5 @@
 @use "../custom" as c;
+@use "../mixins" as mix;
 
 .footer-section {
   padding-top: 6rem !important;
@@ -28,19 +29,11 @@
   }
 
   .media-sosial-icon {
-    display: inline-block;
-    background-color: c.$primary;
-    padding: 1rem;
-    border-radius: 60%;
-    position: relative;
+    @include mix.media-social-icon;
   }
 
   .fa-brands {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include mix.fa-brands;
   }
 }
 
@@ -60,6 +53,30 @@
     margin-bottom: 1rem;
     &:nth-child(4) {
       margin-bottom: 0rem;
+    }
+  }
+
+  .media-sosial-icon {
+    a {
+      color: currentColor;
+      transition: 600 all;
+      &:hover {
+        color: currentColor;
+        font-size: 110%;
+      }
+    }
+  }
+
+  .profil-container,
+  .organisasi-container,
+  .lainnya-container {
+    a {
+      color: currentColor;
+      text-decoration: none;
+
+      &:hover {
+        color: c.$primary;
+      }
     }
   }
 }

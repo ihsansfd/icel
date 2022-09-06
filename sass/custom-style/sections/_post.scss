@@ -1,0 +1,60 @@
+@use "../custom" as c;
+@use "../mixins" as mix;
+
+.post-container {
+  max-width: 50rem;
+  //   border: 1px solid black;
+  //   background-color: white;
+}
+
+article {
+  .article-title {
+    font-weight: 700;
+  }
+
+  .post-meta {
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  //   border: 1px solid yellow;
+
+  .featured-image {
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      object-position: center;
+
+      @include c.media-breakpoint-up(sm) {
+        max-height: 350px;
+      }
+      @include c.media-breakpoint-up(md) {
+        max-height: 400px;
+      }
+    }
+  }
+
+  .media-sosial-icon {
+    @include mix.media-social-icon;
+  }
+
+  .fa-brands {
+    @include mix.fa-brands;
+    color: white;
+  }
+
+  .media-sosial-icon.twitter {
+    background-color: c.$twitter-color;
+  }
+
+  .media-sosial-icon.facebook {
+    background-color: c.$facebook-color;
+  }
+
+  a {
+    font-weight: 600;
+    color: c.$primary;
+  }
+}
