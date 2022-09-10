@@ -15,11 +15,11 @@
 @mixin swiper-button {
   background-color: c.$grey-light-500;
   opacity: 70%;
-  padding: 2rem;
+  padding: 1.7rem;
   border-radius: 60%;
 
   &::after {
-    font-size: 1.875rem;
+    font-size: 1.575rem;
     position: absolute;
     top: 50%;
     left: 50%;

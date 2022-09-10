@@ -10360,11 +10360,11 @@ section {
 .publikasi .swiper-button {
   background-color: #d9d9d9;
   opacity: 70%;
-  padding: 2rem;
+  padding: 1.7rem;
   border-radius: 60%;
 }
 .publikasi .swiper-button::after {
-  font-size: 1.875rem;
+  font-size: 1.575rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10582,11 +10582,11 @@ section {
 .kalender-kegiatan .swiper-button {
   background-color: #d9d9d9;
   opacity: 70%;
-  padding: 2rem;
+  padding: 1.7rem;
   border-radius: 60%;
 }
 .kalender-kegiatan .swiper-button::after {
-  font-size: 1.875rem;
+  font-size: 1.575rem;
   position: absolute;
   top: 50%;
   left: 50%;
