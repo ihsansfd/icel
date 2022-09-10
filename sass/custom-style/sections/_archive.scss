@@ -5,7 +5,11 @@
   @include mix.card-posts;
 
   .row {
-    width: auto;
+    max-width: 80%;
+    @include c.media-breakpoint-up(md) {
+      max-width: 68rem;
+    }
+    min-width: 80%;
   }
 
   .card {

@@ -43,11 +43,11 @@
       width: 100%;
     }
 
-    width: 80%;
-    @include c.media-breakpoint-up(md) {
-      // min-width: 18rem;
-      max-width: 20rem;
-    }
+    // width: 100%;
+    // @include c.media-breakpoint-up(md) {
+    //   // min-width: 18rem;
+    //   max-width: 20rem;
+    // }
   }
 
   .card-title {

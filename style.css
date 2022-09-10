@@ -10177,7 +10177,7 @@ a {
 
 .pagination-nav {
   width: max-content;
-  margin: 0 auto;
+  margin-left: auto;
 }
 .pagination-nav .disabled {
   display: none;
@@ -10185,12 +10185,6 @@ a {
 .pagination-nav .active .page-link {
   background-color: #081828;
   border: 1px solid #dee2e6;
-}
-@media (min-width: 1200px) {
-  .pagination-nav {
-    margin-left: auto;
-    margin-right: 9.1rem;
-  }
 }
 .pagination-nav .page-item {
   font-size: 0.9rem;
@@ -10402,42 +10396,6 @@ section {
   right: 2rem;
 }
 
-.kabar .card {
-  padding: 0;
-  width: 80%;
-}
-.kabar .card img {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .kabar .card {
-    max-width: 20rem;
-  }
-}
-.kabar .card-title {
-  text-overflow: ellipsis;
-  font-weight: 700;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  max-height: 7rem;
-}
-.kabar .card-subtitle {
-  font-weight: 600;
-}
-.kabar .card-text {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  max-height: 7rem;
-}
-.kabar .card-body {
-  padding: 2rem;
-}
-
 .footer-section {
   padding-top: 6rem !important;
   background-color: #081828;
@@ -10617,15 +10575,9 @@ section {
 
 .archive .card {
   padding: 0;
-  width: 80%;
 }
 .archive .card img {
   width: 100%;
-}
-@media (min-width: 768px) {
-  .archive .card {
-    max-width: 20rem;
-  }
 }
 .archive .card-title {
   text-overflow: ellipsis;
@@ -10651,7 +10603,13 @@ section {
   padding: 2rem;
 }
 .archive .row {
-  width: auto;
+  max-width: 80%;
+  min-width: 80%;
+}
+@media (min-width: 768px) {
+  .archive .row {
+    max-width: 68rem;
+  }
 }
 .post-container {
   max-width: 50rem;
