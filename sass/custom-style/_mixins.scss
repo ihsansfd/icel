@@ -88,3 +88,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin ellipsis-overflow($max-lines) {
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $max-lines !important;
+  -webkit-box-orient: vertical !important;
+}

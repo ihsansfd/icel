@@ -1,10 +1,22 @@
 @use "../custom" as c;
 @use "../mixins" as mix;
 
-.post-container {
+.main-site {
   max-width: 50rem;
   //   border: 1px solid black;
   //   background-color: white;
+  a {
+    font-weight: 600;
+    color: c.$primary;
+  }
+}
+
+.main-site-publikasi {
+  max-width: 60rem;
+}
+
+.main-site-profile {
+  max-width: 70rem;
 }
 
 article {
@@ -23,15 +35,15 @@ article {
     img {
       width: 100%;
       height: auto;
-      max-height: 250px;
+      max-height: 15.625rem;
       object-fit: cover;
       object-position: center;
 
       @include c.media-breakpoint-up(sm) {
-        max-height: 350px;
+        max-height: 21.875rem;
       }
       @include c.media-breakpoint-up(md) {
-        max-height: 400px;
+        max-height: 25rem;
       }
     }
   }
@@ -51,10 +63,5 @@ article {
 
   .media-sosial-icon.facebook {
     background-color: c.$facebook-color;
-  }
-
-  a {
-    font-weight: 600;
-    color: c.$primary;
   }
 }

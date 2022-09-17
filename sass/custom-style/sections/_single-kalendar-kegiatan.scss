@@ -1,0 +1,18 @@
+@use "../custom" as c;
+
+.card-single-kalendar-kegiatan {
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 15.625rem;
+    object-fit: cover;
+    object-position: center;
+
+    @include c.media-breakpoint-up(sm) {
+      max-height: 21.875rem;
+    }
+    @include c.media-breakpoint-up(md) {
+      max-height: 25rem;
+    }
+  }
+}

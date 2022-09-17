@@ -1,9 +1,32 @@
 @use "../custom" as c;
+@use "sass:color";
 
 .btn-lihat-detail {
   background-color: white;
   transition: 600ms all;
   &:hover {
     color: c.$primary !important;
+  }
+}
+
+.btn-primary {
+  &:hover {
+    background-color: c.$primary-darker !important;
+  }
+}
+
+.btn-info {
+  &:hover {
+    background-color: c.$info-darker !important;
+  }
+}
+
+.btn-grey-light-400 {
+  background-color: c.$grey-light-400;
+  transition: 600ms all;
+
+  &:hover {
+    background-color: c.$primary !important;
+    color: white !important;
   }
 }

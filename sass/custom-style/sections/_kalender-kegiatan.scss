@@ -9,18 +9,50 @@
     max-width: 65rem;
 
     @include c.media-breakpoint-up(md) {
-      max-height: 17rem;
+      max-height: 16.7rem;
     }
   }
 
   .kalendar-card {
-    width: 80% !important;
+    width: 80%;
     max-width: 50rem;
     margin: 0 auto;
     height: -webkit-max-content !important;
     height: -moz-max-content !important;
     height: max-content !important;
 
+    &:nth-child(1n) {
+      .kalendar-date-content {
+        background-color: c.$primary;
+      }
+    }
+
+    &:nth-child(2n) {
+      .kalendar-date-content {
+        background-color: c.$primary-2;
+      }
+    }
+
+    &:nth-child(3n) {
+      .kalendar-date-content {
+        background-color: c.$primary-3;
+      }
+    }
+
+    &:nth-child(4n) {
+      .kalendar-date-content {
+        background-color: c.$primary-4;
+      }
+    }
+
+    &:nth-child(5n) {
+      .kalendar-date-content {
+        background-color: c.$primary-5;
+      }
+    }
+  }
+
+  .col-kalendar {
     &:nth-child(1n) {
       .kalendar-date-content {
         background-color: c.$primary;
@@ -95,5 +127,11 @@
     &::after {
       writing-mode: vertical-rl;
     }
+  }
+}
+
+.archive-kalendar-kegiatan {
+  .kalendar-card {
+    width: 100%;
   }
 }

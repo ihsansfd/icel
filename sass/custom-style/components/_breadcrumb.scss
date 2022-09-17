@@ -1,0 +1,18 @@
+@use "../custom" as c;
+
+.breadcrumb {
+  --bs-breadcrumb-divider: '>';
+}
+
+.breadcrumb-nav {
+  a {
+    color: c.$primary;
+    font-weight: 600;
+  }
+}
+
+.breadcrumb-item {
+  &:before {
+    font-weight: bold;
+  }
+}

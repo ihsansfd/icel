@@ -4,6 +4,7 @@
   padding: 0;
   .carousel-inner {
     .carousel-item {
+      position: relative;
       height: 100vh;
       width: 100vw;
 
@@ -29,48 +30,65 @@
     }
 
     .carousel-cta {
+      min-height: max-content;
       text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-      width: 60%;
+      // width: 60%;
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+      // left: 50%;
+      transform: translate(0, -50%);
       z-index: 2;
 
-      h3.sub-title {
-        margin: 0 auto;
-        width: 60%;
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
+      // h3.sub-title {
+      //   // margin: 0 auto;
+      //   font-size: 1rem;
+      //   margin-bottom: 0.5rem;
+      //   font-weight: 600;
 
-        @include c.media-breakpoint-up(md) {
-          font-size: 1.4375rem;
-        }
-      }
+      //   @include c.media-breakpoint-up(md) {
+      //     font-size: 1.4375rem;
+      //   }
+      // }
 
       h2.title {
-        margin-bottom: 0.5rem;
+        text-shadow: none;
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 700;
         @include c.media-breakpoint-up(lg) {
+          font-size: 2.8rem;
+        }
+        @include c.media-breakpoint-up(xl) {
           font-size: 4.0625rem;
         }
       }
 
       .caption {
         font-size: 0.975rem;
-        margin: 0 auto;
-        width: 60%;
+        // margin: 0 auto;
+        @include c.media-breakpoint-up(md) {
+          width: max(60%, 30rem);
+        }
         // min-height: max-content;
         // word-wrap: break-word;
       }
 
       .btn-cta {
         text-shadow: inherit;
-        box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+        background-color: white;
+        color: c.$custom-green-light;
+        font-weight: bold;
+        text-shadow: none;
+        transition: all 600ms;
+
+        &:hover {
+          background-color: c.$primary;
+          color: white;
+        }
       }
     }
   }
+}
+
+h2 mark {
+  line-height: 1.7;
 }

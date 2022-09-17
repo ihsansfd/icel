@@ -1,10 +1,20 @@
+@use "sass:color";
+
 $primary: #00a365;
 $primary-2: #e6d422;
 $primary-3: #a822e6;
 $primary-4: #fc6f32;
 $primary-5: #26bffe;
+$primary-darker: color.scale($primary, $lightness: -20%);
+$custom-green-light: #6a8423;
+
 $icel_secondary: #081828;
+
+$info: #284af5;
+$info-darker: color.scale($info, $lightness: -20%);
+
 $grey-light: #f5f5f5;
+$grey-light-400: color.scale($grey-light, $lightness: -5%);
 $grey-light-500: #d9d9d9;
 $grey-dark: #7e8082;
 $grey-dark-600: #5a5a5a;

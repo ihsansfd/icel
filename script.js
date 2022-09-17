@@ -4,25 +4,17 @@ var swiperPublikasi = new Swiper(".slide-content-publikasi", {
   spaceBetween: 50,
   centeredSlides: true,
   loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   navigation: {
     nextEl: ".swiper-button-next-publikasi",
     prevEl: ".swiper-button-prev-publikasi",
   },
 });
 
-var swiperKalendar = new Swiper(".slide-content-kalendar", {
+var swiperKalendar = new Swiper(".kalendar-container", {
   direction: "vertical",
-  slidesPerView: 4,
-  slidesPerGroup: 1,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
   spaceBetween: 20,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
   navigation: {
     nextEl: ".swiper-button-next-kalendar",
     prevEl: ".swiper-button-prev-kalendar",

@@ -1,0 +1,28 @@
+@use "../mixins" as mix;
+@use "../custom" as c;
+
+.archive-profile,
+.single-profile-article {
+  .media-sosial-icon {
+    background-color: c.$grey-light-400;
+    border-radius: 60%;
+    padding: 1rem;
+    position: relative;
+    transition: 600ms all;
+
+    i {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      i {
+        color: white !important;
+      }
+      background-color: c.$primary !important;
+    }
+  }
+}

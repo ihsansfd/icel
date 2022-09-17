@@ -1,0 +1,14 @@
+@use "../custom" as c;
+
+.table-meta-box {
+  td {
+    vertical-align: top;
+    padding-bottom: 1rem;
+  }
+  .publikasi-meta-title,
+  .kalendar-meta-title {
+    font-weight: bold;
+    padding-right: 1.5rem;
+    color: c.$primary;
+  }
+}

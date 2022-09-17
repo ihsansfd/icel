@@ -9,3 +9,25 @@ a {
 .page-dark {
   background-color: c.$grey-light;
 }
+
+.list-reset {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.bg-primary-darker {
+  background-color: c.$primary-darker;
+}
+
+.bg-info-darker {
+  background-color: c.$info-darker;
+}
+
+.bg-custom-green-light {
+  background-color: c.$custom-green-light;
+}
+
+.marked-title {
+  // width: max-content;
+}

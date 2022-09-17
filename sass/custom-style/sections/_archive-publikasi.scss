@@ -1,0 +1,11 @@
+@use "../custom" as c;
+
+.card-archive-publikasi {
+  @include c.media-breakpoint-up(md) {
+    height: 47rem;
+  }
+
+  @include c.media-breakpoint-up(lg) {
+    height: 22rem;
+  }
+}

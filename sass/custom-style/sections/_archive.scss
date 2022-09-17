@@ -1,19 +1,19 @@
 @use "../custom" as c;
 @use "../mixins" as mix;
 
-.archive {
+.archive-regular-card-posts {
   @include mix.card-posts;
-
-  .row {
-    max-width: 80%;
-    @include c.media-breakpoint-up(md) {
-      max-width: 68rem;
-    }
-    min-width: 80%;
-  }
 
   .card {
     // background-color: c.$grey-light;
     // border: none;
   }
+}
+
+.archive-container {
+  max-width: 80%;
+  @include c.media-breakpoint-up(md) {
+    max-width: 68rem;
+  }
+  min-width: 80%;
 }

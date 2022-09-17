@@ -1,0 +1,36 @@
+@use "../mixins" as mix;
+
+.card-title-regular {
+  @include mix.card-title;
+}
+
+.card-profile {
+  //   max-width: 20rem;
+  img {
+    height: 15.625rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  //   .card-title {
+  //     height: 50px;
+  //   }
+
+  //   .card-subtitle {
+  //     height: 60px;
+  //     // position: relative;
+  //   }
+
+  .card-info {
+    height: 7rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  //   .card-detail {
+  //     position: absolute;
+  //     bottom: 1rem;
+  //   }
+}

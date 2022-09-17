@@ -1,0 +1,14 @@
+@use "../custom" as c;
+
+
+.publikasi-image {
+  overflow: hidden;
+  @include c.media-breakpoint-up(xs) {
+    max-height: 21.875rem;
+    margin-bottom: 2rem;
+  }
+
+  @include c.media-breakpoint-up(md) {
+    max-height: 26rem;
+  }
+}
