@@ -10424,54 +10424,38 @@ h2 mark {
 .publikasi .link-publikasi:hover a {
   color: initial;
 }
+.publikasi .slide-publikasi-wrapper {
+  position: relative;
+}
 .publikasi .card {
-  width: 18rem !important;
-  height: 22rem;
-  color: white;
+  border: 2px solid #00a365 !important;
+  width: 22rem !important;
+  height: 17rem;
+  color: #00a365 !important;
   padding: 3.125rem 1.875rem;
-  border-top-right-radius: 30px 30px;
   position: relative;
   overflow: hidden;
   border: none;
   transition: 500ms;
 }
+.publikasi .card .btn-outline-primary {
+  color: #00a365;
+}
+.publikasi .card .btn-outline-primary:hover {
+  color: white;
+}
 .publikasi .card-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-}
-.publikasi .card-description {
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-}
-.publikasi .card-buku {
-  background-color: #00a365;
-}
-.publikasi .card-seri-analisis {
-  background-color: #e6d422;
-}
-.publikasi .card-pendapat-hukum {
-  background-color: #a822e6;
-}
-.publikasi .card-infografis {
-  background-color: #fc6f32;
-}
-.publikasi .card-kertas-kebijakan {
-  background-color: #26bffe;
 }
 .publikasi .card-symbol {
-  display: block;
-  position: absolute;
-  font-size: 10rem;
-  bottom: -0.625rem;
-  right: -1.25rem;
-  opacity: 30%;
+  font-size: 3rem;
 }
 .publikasi .slide-content {
   padding: 2rem;
 }
-.publikasi .swiper {
-  width: 100%;
+.publikasi .swiper-publikasi {
+  width: min(100%, 75rem);
 }
 .publikasi .swiper-button {
   background-color: #d9d9d9;
@@ -10503,13 +10487,7 @@ h2 mark {
   z-index: 2;
   opacity: 100%;
   pointer-events: initial;
-  transform: scale(1.1);
-}
-.publikasi .swiper-slide-active .link-publikasi {
-  display: block;
-}
-.publikasi .link-publikasi {
-  display: none;
+  transform: scale(1.1) !important;
 }
 .publikasi .swiper-button-prev {
   left: 2rem;

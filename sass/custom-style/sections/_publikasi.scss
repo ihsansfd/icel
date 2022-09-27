@@ -21,64 +21,65 @@
     // background-color: c.$grey-dark;
   }
 
+  .slide-publikasi-wrapper {
+    position: relative;
+  }
+
   .card {
-    width: 18rem !important;
-    height: 22rem;
-    color: white;
+    border: 2px solid c.$primary !important;
+    width: 22rem !important;
+    height: 17rem;
+    color: c.$primary !important;
     padding: 3.125rem 1.875rem;
-    border-top-right-radius: 30px 30px;
     position: relative;
     overflow: hidden;
     border: none;
     transition: 500ms;
+
+    .btn-outline-primary {
+      color: c.$primary;
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 
   .card-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   }
 
-  .card-description {
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-  }
+  // .card-buku {
+  //   background-color: c.$primary;
+  // }
 
-  .card-buku {
-    background-color: c.$primary;
-  }
+  // .card-seri-analisis {
+  //   background-color: c.$primary-2;
+  // }
 
-  .card-seri-analisis {
-    background-color: c.$primary-2;
-  }
+  // .card-pendapat-hukum {
+  //   background-color: c.$primary-3;
+  // }
 
-  .card-pendapat-hukum {
-    background-color: c.$primary-3;
-  }
+  // .card-infografis {
+  //   background-color: c.$primary-4;
+  // }
 
-  .card-infografis {
-    background-color: c.$primary-4;
-  }
-
-  .card-kertas-kebijakan {
-    background-color: c.$primary-5;
-  }
+  // .card-kertas-kebijakan {
+  //   background-color: c.$primary-5;
+  // }
 
   .card-symbol {
-    display: block;
-    position: absolute;
-    font-size: 10rem;
-    bottom: -0.625rem;
-    right: -1.25rem;
-    opacity: 30%;
+    font-size: 3rem;
   }
 
   .slide-content {
     padding: 2rem;
   }
 
-  .swiper {
-    width: 100%;
+  .swiper-publikasi {
+    width: min(100%, 75rem);
     // overflow: visible;
   }
 
@@ -97,17 +98,17 @@
       z-index: 2;
       opacity: 100%;
       pointer-events: initial;
-      transform: scale(1.1);
+      transform: scale(1.1) !important;
 
-      .link-publikasi {
-        display: block;
-      }
+      // .link-publikasi {
+      //   display: block;
+      // }
     }
   }
 
-  .link-publikasi {
-    display: none;
-  }
+  // .link-publikasi {
+  //   display: none;
+  // }
 
   .swiper-button-prev {
     left: 2rem;
